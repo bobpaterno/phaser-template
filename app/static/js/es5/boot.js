@@ -16,15 +16,16 @@ var Directions = { Up: 0, Right: 1, Down: 2, Left: 3 };
 
 var hexColors = ['#aaccff', '#aaffcc', '#ccffaa', '#ccaaff', '#ffccaa', '#ffaacc'];
 
-Game.Boot = function() { };
+Game.Boot = function(game) {
+   this.game = game;
+};
 
 Game.Boot.prototype = {
   preload: function () {
-  	game.load.image('background', 'img/background.png');
-  	game.load.image('loadbar', 'img/loadbar.png');
+  	this.game.load.image('loadbar', 'img/loadbar.png');
   },
 
   create: function () {
-    game.state.start('Load');
+    this.game.state.start('Load');
   }
 };
