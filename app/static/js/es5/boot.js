@@ -1,19 +1,15 @@
 /* global game */
-/* jshint unused: false */
 'use strict';
 
 var Game = {};
 
-// initialize variables
-var w = 800;
-var h = 600;
-
-Game.Boot = function(game) {
+Game.Boot = function() {
    this.game = game;
 };
 
 Game.Boot.prototype = {
   preload: function () {
+    this.game.input.maxPointers = 1;
   	this.game.load.image('loadbar', 'img/loadbar.png');
   },
 
