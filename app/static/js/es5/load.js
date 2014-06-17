@@ -1,7 +1,7 @@
 /* global Game, game */
 'use strict';
 
-Game.Load = function(game) {
+Game.Load = function() {
   this.game = game;
 };
 
@@ -23,7 +23,7 @@ Game.Load.prototype = {
 
   create: function () {
     game.add.sprite(300,300,'square-green');
-
-// game.state.start('anotherState');
+    
+    game.state.start('test1');
   }
 };
